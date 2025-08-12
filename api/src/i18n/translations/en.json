@@ -1,0 +1,85 @@
+{
+  "auth": {
+    "login_success": "Login successful",
+    "login_failed": "Invalid credentials",
+    "logout_success": "Logout successful",
+    "unauthorized": "Unauthorized access",
+    "token_expired": "Token has expired",
+    "account_locked": "Account is locked",
+    "password_changed": "Password changed successfully",
+    "registration_success": "Registration successful",
+    "email_verification_sent": "Email verification sent",
+    "email_verified": "Email verified successfully"
+  },
+  "products": {
+    "product_created": "Product created successfully",
+    "product_updated": "Product updated successfully",
+    "product_deleted": "Product deleted successfully",
+    "product_not_found": "Product not found",
+    "out_of_stock": "Product is out of stock",
+    "low_stock": "Low stock available",
+    "category_created": "Category created successfully",
+    "category_updated": "Category updated successfully",
+    "category_deleted": "Category deleted successfully",
+    "invalid_category": "Invalid category",
+    "variant_created": "Product variant created successfully",
+    "variant_updated": "Product variant updated successfully",
+    "variant_deleted": "Product variant deleted successfully"
+  },
+  "cart": {
+    "item_added": "Item added to cart",
+    "item_removed": "Item removed from cart",
+    "item_updated": "Cart item updated",
+    "cart_cleared": "Cart cleared",
+    "cart_empty": "Cart is empty",
+    "quantity_exceeded": "Requested quantity exceeds available stock",
+    "invalid_quantity": "Invalid quantity specified"
+  },
+  "orders": {
+    "order_placed": "Order placed successfully",
+    "order_cancelled": "Order cancelled",
+    "order_updated": "Order updated successfully",
+    "order_not_found": "Order not found",
+    "payment_pending": "Payment is pending",
+    "payment_completed": "Payment completed",
+    "payment_failed": "Payment failed",
+    "order_shipped": "Order has been shipped",
+    "order_delivered": "Order delivered successfully",
+    "return_requested": "Return request submitted",
+    "refund_processed": "Refund processed successfully"
+  },
+  "user": {
+    "profile_updated": "Profile updated successfully",
+    "address_added": "Address added successfully",
+    "address_updated": "Address updated successfully",
+    "address_deleted": "Address deleted successfully",
+    "user_not_found": "User not found",
+    "invalid_user_data": "Invalid user data provided"
+  },
+  "notifications": {
+    "new_order": "You have a new order",
+    "order_status_update": "Your order status has been updated",
+    "payment_confirmation": "Payment confirmed",
+    "shipping_update": "Shipping update for your order",
+    "low_stock_alert": "Low stock alert",
+    "welcome": "Welcome to our store!",
+    "created": "Notification created successfully",
+    "marked_as_read": "Notification marked as read",
+    "all_marked_as_read": "All notifications marked as read",
+    "bulk_deleted": "Notifications deleted successfully",
+    "device_token_added": "Device token added successfully",
+    "category_preference_updated": "Category preference updated successfully"
+  },
+  "common": {
+    "success": "Operation successful",
+    "error": "An error occurred",
+    "validation_failed": "Validation failed",
+    "not_found": "Resource not found",
+    "forbidden": "Access forbidden",
+    "internal_error": "Internal server error",
+    "invalid_request": "Invalid request",
+    "created": "Created successfully",
+    "updated": "Updated successfully",
+    "deleted": "Deleted successfully"
+  }
+}

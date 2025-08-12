@@ -9,6 +9,8 @@ import { AuthModule } from './auth/auth.module';
 import { ProductModule } from './modules/product/product.module';
 import { CartModule } from './modules/cart/cart.module';
 import { CheckoutModule } from './modules/checkout/checkout.module';
+import { I18nModule } from './i18n/i18n.module';
+import { NotificationsModule } from './modules/notifications/notifications.module';
 
 @Module({
   imports: [
@@ -17,6 +19,8 @@ import { CheckoutModule } from './modules/checkout/checkout.module';
       envFilePath: '.env',
     }),
     MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost:27017/nestjs_ecommerce'),
+    I18nModule,
+    NotificationsModule,
     UserModule,
     AdminModule,
     AuthModule,

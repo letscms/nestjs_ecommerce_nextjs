@@ -1,0 +1,79 @@
+{
+  "auth": {
+    "login_success": "Connexion réussie",
+    "login_failed": "Identifiants invalides",
+    "logout_success": "Déconnexion réussie",
+    "unauthorized": "Accès non autorisé",
+    "token_expired": "Le token a expiré",
+    "account_locked": "Le compte est verrouillé",
+    "password_changed": "Mot de passe modifié avec succès",
+    "registration_success": "Inscription réussie",
+    "email_verification_sent": "Vérification email envoyée",
+    "email_verified": "Email vérifié avec succès"
+  },
+  "products": {
+    "product_created": "Produit créé avec succès",
+    "product_updated": "Produit mis à jour avec succès",
+    "product_deleted": "Produit supprimé avec succès",
+    "product_not_found": "Produit non trouvé",
+    "out_of_stock": "Produit en rupture de stock",
+    "low_stock": "Stock faible disponible",
+    "category_created": "Catégorie créée avec succès",
+    "category_updated": "Catégorie mise à jour avec succès",
+    "category_deleted": "Catégorie supprimée avec succès",
+    "invalid_category": "Catégorie invalide",
+    "variant_created": "Variante de produit créée avec succès",
+    "variant_updated": "Variante de produit mise à jour avec succès",
+    "variant_deleted": "Variante de produit supprimée avec succès"
+  },
+  "cart": {
+    "item_added": "Article ajouté au panier",
+    "item_removed": "Article retiré du panier",
+    "item_updated": "Article du panier mis à jour",
+    "cart_cleared": "Panier vidé",
+    "cart_empty": "Le panier est vide",
+    "quantity_exceeded": "La quantité demandée dépasse le stock disponible",
+    "invalid_quantity": "Quantité invalide spécifiée"
+  },
+  "orders": {
+    "order_placed": "Commande passée avec succès",
+    "order_cancelled": "Commande annulée",
+    "order_updated": "Commande mise à jour avec succès",
+    "order_not_found": "Commande non trouvée",
+    "payment_pending": "Paiement en attente",
+    "payment_completed": "Paiement terminé",
+    "payment_failed": "Paiement échoué",
+    "order_shipped": "La commande a été expédiée",
+    "order_delivered": "Commande livrée avec succès",
+    "return_requested": "Demande de retour soumise",
+    "refund_processed": "Remboursement traité avec succès"
+  },
+  "user": {
+    "profile_updated": "Profil mis à jour avec succès",
+    "address_added": "Adresse ajoutée avec succès",
+    "address_updated": "Adresse mise à jour avec succès",
+    "address_deleted": "Adresse supprimée avec succès",
+    "user_not_found": "Utilisateur non trouvé",
+    "invalid_user_data": "Données utilisateur invalides fournies"
+  },
+  "notifications": {
+    "new_order": "Vous avez une nouvelle commande",
+    "order_status_update": "Le statut de votre commande a été mis à jour",
+    "payment_confirmation": "Paiement confirmé",
+    "shipping_update": "Mise à jour d'expédition pour votre commande",
+    "low_stock_alert": "Alerte stock faible",
+    "welcome": "Bienvenue dans notre magasin!"
+  },
+  "common": {
+    "success": "Opération réussie",
+    "error": "Une erreur s'est produite",
+    "validation_failed": "Validation échouée",
+    "not_found": "Ressource non trouvée",
+    "forbidden": "Accès interdit",
+    "internal_error": "Erreur interne du serveur",
+    "invalid_request": "Demande invalide",
+    "created": "Créé avec succès",
+    "updated": "Mis à jour avec succès",
+    "deleted": "Supprimé avec succès"
+  }
+}

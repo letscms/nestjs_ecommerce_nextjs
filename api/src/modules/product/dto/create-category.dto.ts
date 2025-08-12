@@ -1,4 +1,4 @@
-import { IsString, IsOptional, IsBoolean } from 'class-validator';
+import { IsString, IsOptional, IsBoolean, IsObject } from 'class-validator';
 
 export class CreateCategoryDto {
   @IsString()
@@ -19,4 +19,14 @@ export class CreateCategoryDto {
   @IsBoolean()
   @IsOptional()
   isActive?: boolean;
+
+  // Multilingual support
+  @IsObject()
+  @IsOptional()
+  translations?: {
+    [languageCode: string]: {
+      name: string;
+      description?: string;
+    };
+  };
 }

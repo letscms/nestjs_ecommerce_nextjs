@@ -1,0 +1,79 @@
+{
+  "auth": {
+    "login_success": "تم تسجيل الدخول بنجاح",
+    "login_failed": "بيانات اعتماد غير صحيحة",
+    "logout_success": "تم تسجيل الخروج بنجاح",
+    "unauthorized": "وصول غير مصرح",
+    "token_expired": "انتهت صلاحية الرمز المميز",
+    "account_locked": "الحساب مقفل",
+    "password_changed": "تم تغيير كلمة المرور بنجاح",
+    "registration_success": "تم التسجيل بنجاح",
+    "email_verification_sent": "تم إرسال تأكيد البريد الإلكتروني",
+    "email_verified": "تم تأكيد البريد الإلكتروني بنجاح"
+  },
+  "products": {
+    "product_created": "تم إنشاء المنتج بنجاح",
+    "product_updated": "تم تحديث المنتج بنجاح",
+    "product_deleted": "تم حذف المنتج بنجاح",
+    "product_not_found": "لم يتم العثور على المنتج",
+    "out_of_stock": "المنتج غير متوفر",
+    "low_stock": "مخزون منخفض متاح",
+    "category_created": "تم إنشاء الفئة بنجاح",
+    "category_updated": "تم تحديث الفئة بنجاح",
+    "category_deleted": "تم حذف الفئة بنجاح",
+    "invalid_category": "فئة غير صالحة",
+    "variant_created": "تم إنشاء متغير المنتج بنجاح",
+    "variant_updated": "تم تحديث متغير المنتج بنجاح",
+    "variant_deleted": "تم حذف متغير المنتج بنجاح"
+  },
+  "cart": {
+    "item_added": "تم إضافة العنصر إلى السلة",
+    "item_removed": "تم إزالة العنصر من السلة",
+    "item_updated": "تم تحديث عنصر السلة",
+    "cart_cleared": "تم مسح السلة",
+    "cart_empty": "السلة فارغة",
+    "quantity_exceeded": "الكمية المطلوبة تتجاوز المخزون المتاح",
+    "invalid_quantity": "كمية غير صالحة محددة"
+  },
+  "orders": {
+    "order_placed": "تم تقديم الطلب بنجاح",
+    "order_cancelled": "تم إلغاء الطلب",
+    "order_updated": "تم تحديث الطلب بنجاح",
+    "order_not_found": "لم يتم العثور على الطلب",
+    "payment_pending": "الدفع معلق",
+    "payment_completed": "تم الدفع",
+    "payment_failed": "فشل الدفع",
+    "order_shipped": "تم شحن الطلب",
+    "order_delivered": "تم تسليم الطلب بنجاح",
+    "return_requested": "تم تقديم طلب الإرجاع",
+    "refund_processed": "تم معالجة الاسترداد بنجاح"
+  },
+  "user": {
+    "profile_updated": "تم تحديث الملف الشخصي بنجاح",
+    "address_added": "تم إضافة العنوان بنجاح",
+    "address_updated": "تم تحديث العنوان بنجاح",
+    "address_deleted": "تم حذف العنوان بنجاح",
+    "user_not_found": "لم يتم العثور على المستخدم",
+    "invalid_user_data": "بيانات مستخدم غير صالحة مقدمة"
+  },
+  "notifications": {
+    "new_order": "لديك طلب جديد",
+    "order_status_update": "تم تحديث حالة طلبك",
+    "payment_confirmation": "تم تأكيد الدفع",
+    "shipping_update": "تحديث الشحن لطلبك",
+    "low_stock_alert": "تنبيه مخزون منخفض",
+    "welcome": "مرحباً بك في متجرنا!"
+  },
+  "common": {
+    "success": "تمت العملية بنجاح",
+    "error": "حدث خطأ",
+    "validation_failed": "فشل التحقق",
+    "not_found": "لم يتم العثور على المورد",
+    "forbidden": "الوصول محظور",
+    "internal_error": "خطأ خادم داخلي",
+    "invalid_request": "طلب غير صالح",
+    "created": "تم الإنشاء بنجاح",
+    "updated": "تم التحديث بنجاح",
+    "deleted": "تم الحذف بنجاح"
+  }
+}
