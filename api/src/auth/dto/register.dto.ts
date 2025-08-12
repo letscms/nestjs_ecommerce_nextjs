@@ -35,6 +35,15 @@ export class RegisterDto {
   @MinLength(6)
   password: string;
 
+  @ApiProperty({
+    description: 'Confirm Password',
+    example: 'password123',
+    minLength: 6,
+  })
+  @IsNotEmpty()
+  @MinLength(6)
+  confirmPassword: string;
+
   @ApiProperty({ 
     example: '+1234567890',
     description: 'Phone number',

@@ -1,6 +1,9 @@
-
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
+@import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 /* Custom styles */
 :root {
   --max-width: 1100px;
@@ -81,6 +84,11 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html,
@@ -90,13 +98,13 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 a {
@@ -104,8 +112,65 @@ a {
   text-decoration: none;
 }
 
+.table-responsive {
+  border-radius: 0.375rem;
+}
+
+.modal-header.bg-primary {
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+
+.btn-group .btn {
+  margin-right: 2px;
+}
+
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* DataTable custom styles */
+.dataTables_wrapper .dataTables_length select {
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  margin-left: 0.5rem;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+/* Custom font weight classes */
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+
+/* Bootstrap component overrides */
+.btn {
+  font-family: 'Inter', sans-serif;
+}
+
+.form-control,
+.form-select,
+.form-check-label {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
 }

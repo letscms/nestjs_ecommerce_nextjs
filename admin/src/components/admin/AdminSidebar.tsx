@@ -7,6 +7,7 @@ import { useAuth } from '@/contexts/AuthContext';
 const sidebarItems = [
   { name: 'Dashboard', href: '/admin', icon: 'bi-speedometer2' },
   { name: 'Users', href: '/admin/users', icon: 'bi-people' },
+  { name: 'Categories', href: '/admin/category', icon: 'bi-box' },
   { name: 'Products', href: '/admin/products', icon: 'bi-box' },
   { name: 'Orders', href: '/admin/orders', icon: 'bi-cart' },
   { name: 'Settings', href: '/admin/settings', icon: 'bi-gear' },

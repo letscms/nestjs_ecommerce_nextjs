@@ -19,15 +19,6 @@ export const adminEndpoint = {
       throw error;
     }
   },
-//   getDashboardData: async () => {
-//     try {
-//       const response = await adminAPI.get('/dashboard');
-//       return response.data;
-//     } catch (error) {
-//       console.error('Error fetching dashboard data:', error);
-//       throw error;
-//     }
-//   }
 
+  
 }
-  // Add more admin-specific API methods as needed

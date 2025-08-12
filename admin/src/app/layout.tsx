@@ -5,7 +5,7 @@ import { AuthProvider } from '@/contexts/AuthContext';
 import '@/lib/fontawesome';
 
 export const metadata: Metadata = {
-  title: "Admin Dashboard",
+  title: "Ecommerce Website In NestJS",
   description: "E-commerce Admin Panel",
 };
 

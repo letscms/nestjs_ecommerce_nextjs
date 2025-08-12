@@ -24,12 +24,27 @@ interface Admin {
   isActive: boolean;
 }
 
+interface UserRegister {
+  email: string;
+  password: string;
+  confirmPassword: string;
+  firstName: string;
+  lastName: string;
+  phone?: string;
+}
+
 type AuthUser = User | Admin | null;
 
 interface AuthContextType {
   user: AuthUser;
   userType: 'user' | 'admin' | null;
   login: (email: string, password: string, type: 'user' | 'admin') => Promise<boolean>;
+  register: (
+    email: string, 
+    password: string, 
+    firstName: string, 
+    lastName: string, 
+  ) => Promise<boolean>;
   logout: () => void;
   loading: boolean;
   isAdmin: boolean;
@@ -39,7 +54,7 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-   const [user, setUser] = useState<AuthUser>(null);
+  const [user, setUser] = useState<AuthUser>(null);
   const [userType, setUserType] = useState<'user' | 'admin' | null>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
@@ -72,6 +87,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (userToken) {
         try {
           const userData = await userEndpoint.getProfile();
+          // console.log('User profile data:', userData);
           setUser(userData);
           setUserType('user');
           return;
@@ -88,6 +104,46 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setLoading(false);
     }
   };
+
+  // Register function for both user and admin
+  const register = async (formData: UserRegister): Promise<boolean> => {
+    try {
+      let data;
+
+      if (formData.type === 'admin') {
+        data = await adminEndpoint.register(
+          formData.email,
+          formData.password,
+          formData.firstName,
+          formData.lastName
+        );
+        if (data.type === 'admin') {
+          localStorage.setItem('admin_token', data.access_token);
+          localStorage.removeItem('user_token');
+          setUser(data.user);
+          setUserType('admin');
+          router.push('/admin');
+          return true;
+        }
+      } else {
+        data = await userEndpoint.register(formData);
+        if (data.type === 'user') {
+          localStorage.setItem('user_token', data.access_token);
+          localStorage.removeItem('admin_token');
+          setUser(data.user);
+          setUserType('user');
+          router.push('/');
+          return true;
+        }
+      }
+
+      throw new Error(`${formData.type} registration failed`);
+    } catch (error) {
+      console.error('Registration failed:', error);
+      return false;
+    }
+  };
+  
 
    const login = async (email: string, password: string, type: 'user' | 'admin'): Promise<boolean> => {
 
@@ -107,7 +163,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         }
       } else {
         data = await userEndpoint.login(email, password);
-        // console.log('User login data:', data);
+        console.log('User login data:', data);
         if (data.type === 'user') {
           localStorage.setItem('user_token', data.access_token);
           localStorage.removeItem('admin_token'); // Clear admin token if exists
@@ -121,16 +177,22 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       throw new Error(`${type} access required`);
     } catch (error) {
       console.error('Login failed:', error);
-      return false;
+      // return false;
     }
   };
 
   const logout = () => {
+    console.log('aaaaaa',user);
+    const userget= user as User;
     localStorage.removeItem('admin_token');
     localStorage.removeItem('user_token');
     setUser(null);
     setUserType(null);
-    router.push('/login');
+    if(userget.role === 'admin') {
+      router.push('/admin/login');
+    } else {  
+      router.push('/login');
+    }
   };
   const isAdmin = userType === 'admin';
   const isUser = userType === 'user';
@@ -140,6 +202,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       user, 
       userType, 
       login, 
+      register,
       logout, 
       loading, 
       isAdmin, 

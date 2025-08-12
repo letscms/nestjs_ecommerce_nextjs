@@ -12,11 +12,11 @@ export default function AdminLogin() {
   const { login, user, isAdmin } = useAuth();
   const router = useRouter();
 
-  useEffect(() => {
-    if (user && isAdmin) {
-      router.push('/admin');
-    }
-  }, [user, isAdmin, router]);
+  // useEffect(() => {
+  //   if (user && isAdmin) {
+  //     router.push('/admin');
+  //   }
+  // }, [user, isAdmin, router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

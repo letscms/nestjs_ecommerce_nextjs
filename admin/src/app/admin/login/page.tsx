@@ -12,18 +12,19 @@ export default function LoginPage() {
   const { login, user } = useAuth();
   const router = useRouter();
 
-//   useEffect(() => {
-//     if (user) {
-//       router.push('/admin');
-//     }
-//   }, [user, router]);
+  useEffect(() => {
+    if (user) {
+      router.push('/admin');
+    }
+  }, [user, router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // setLoading(true);
-    // setError('');
-
-    // const success = await login(email, password);
+    setLoading(true);
+    setError('');
+  console.log('Attempting to login with:', { email, password });
+    // const success = await login(email, password, 'admin');
+    // console.log('Login success:', success);
     // if (!success) {
     //   setError('Invalid email or password. Admin access required.');
     // }
@@ -53,7 +54,7 @@ export default function LoginPage() {
                 <form onSubmit={handleSubmit}>
                   <div className="mb-3">
                     <label htmlFor="email" className="form-label">
-                      Email Address
+                      Email Address dddddd
                     </label>
                     <div className="input-group">
                       <span className="input-group-text">

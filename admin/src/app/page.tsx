@@ -1,54 +1,16 @@
+'use client';
+import Header from "@/components/front/Header";
+import { useAuth } from "@/contexts/AuthContext";
 import Image from "next/image";
 
 export default function Home() {
+  const { user } = useAuth();
+  console.log("User Auth:", user);
   return (
     <div className="container-fluid">
-      {/* Bootstrap Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container">
-          <a className="navbar-brand" href="#">
-            <Image
-              src="/next.svg"
-              alt="Next.js logo"
-              width={120}
-              height={25}
-              priority
-            />
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <a className="nav-link active" href="#">
-                  Dashboard
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Users
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Products
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Orders
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Header />
+
+      
 
       {/* Main Content */}
       <div className="container mt-5">
